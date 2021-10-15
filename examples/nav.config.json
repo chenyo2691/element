@@ -307,6 +307,10 @@
             {
               "path": "/drawer",
               "title": "Drawer 抽屉"
+            },
+            {
+              "path": "/test-cpt",
+              "title": "TestCpt 测试组件"
             }
           ]
         }
@@ -621,6 +625,10 @@
             {
               "path": "/drawer",
               "title": "Drawer"
+            },
+            {
+              "path": "/test-cpt",
+              "title": "TestCpt"
             }
           ]
         }
@@ -935,6 +943,10 @@
             {
               "path": "/drawer",
               "title": "Drawer"
+            },
+            {
+              "path": "/test-cpt",
+              "title": "TestCpt"
             }
           ]
         }
@@ -1249,6 +1261,10 @@
             {
               "path": "/drawer",
               "title": "Drawer"
+            },
+            {
+              "path": "/test-cpt",
+              "title": "TestCpt"
             }
           ]
         }

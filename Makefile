@@ -1,48 +1,48 @@
 .PHONY: dist test
-# Ö´ĞĞmakeÄ¬ÈÏÖ¸Ïòhelp
+# æ‰§è¡Œmakeé»˜è®¤æŒ‡å‘help
 default: help
 
 # build all theme
-# ¹¹½¨Ö÷Ìâ
+# æ„å»ºä¸»é¢˜
 build-theme:
 	npm run build:theme
-# °²×°ÒÀÀµ
+# å®‰è£…ä¾èµ–
 install:
 	npm install
-# Ê¹ÓÃÌÔ±¦Ô´°²×°ÒÀÀµ
+# ä½¿ç”¨æ·˜å®æºå®‰è£…ä¾èµ–
 install-cn:
 	npm install --registry=http://registry.npm.taobao.org
-# ¹¹½¨Ó¦ÓÃ
+# æ„å»ºåº”ç”¨
 dev:
 	npm run dev
 
 play:
 	npm run dev:play
-# ĞÂÔö×é¼ş
+# æ–°å¢ç»„ä»¶
 new:
 	node build/bin/new.js $(filter-out $@,$(MAKECMDGOALS))
-# ÎªÍøÕ¾Ìí¼ÓĞÂÓïÑÔ
+# ä¸ºç½‘ç«™æ·»åŠ æ–°è¯­è¨€
 new-lang:
 	node build/bin/new-lang.js $(filter-out $@,$(MAKECMDGOALS))
-# ´ò°ü
+# æ‰“åŒ…
 dist: install
 	npm run dist
-# ²¿Êğ
+# éƒ¨ç½²
 deploy:
 	@npm run deploy
-# ·¢²¼
+# å‘å¸ƒ
 pub:
 	npm run pub
-# µ¥Ôª²âÊÔ
+# å•å…ƒæµ‹è¯•
 test:
 	npm run test:watch
-# °ïÖúĞÅÏ¢
+# å¸®åŠ©ä¿¡æ¯
 help:
-	@echo "   make                                 ---  ÃüÁîÊ¹ÓÃËµÃ÷"
-	@echo "   make install                         ---  °²×°ÒÀÀµ"
-	@echo "   make new <component-name> [ÖĞÎÄÃû]   ---  ´´½¨ĞÂ×é¼ş package. ÀıÈç 'make new button °´Å¥'"
-	@echo "   make dev                             ---  ¿ª·¢Ä£Ê½"
-	@echo "   make dist                            ---  ±àÒëÏîÄ¿£¬Éú³ÉÄ¿±êÎÄ¼ş"
-	@echo "   make deploy                          ---  ²¿Êğ demo"
-	@echo "   make pub                             ---  ·¢²¼µ½ npm ÉÏ"
-	@echo "   make new-lang <lang>                 ---  ÎªÍøÕ¾Ìí¼ÓĞÂÓïÑÔ. ÀıÈç 'make new-lang fr'"
+	@echo "   make help"
+	@echo "   make install                         ---  install dependence"
+	@echo "   make new <component-name> [cnName]   ---  make new component package. eg 'make new button btns'"
+	@echo "   make dev                             ---  development mode"
+	@echo "   make dist                            ---  compile project, build target files"
+	@echo "   make deploy                          ---  deploy demo"
+	@echo "   make pub                             ---  publish to npm"
+	@echo "   make new-lang <lang>                 ---  new language for website. eg. 'make new-lang fr'"
