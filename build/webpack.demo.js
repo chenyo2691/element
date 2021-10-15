@@ -1,3 +1,4 @@
+// 官网的webpack配置
 const path = require('path');
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');

@@ -1,3 +1,8 @@
+
+/**
+ * 用于自动生成全组件样式加载文件（即packages/theme-chalk/src/index.scss）的脚本
+ * 在编译时使用
+ */
 var fs = require('fs');
 var path = require('path');
 var Components = require('../../components.json');

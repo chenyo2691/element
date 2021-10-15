@@ -1,3 +1,7 @@
+/**
+ * 用于将组件多语言包转换成UMD包的脚本，在编译时使用
+ * 转换过程举例：src/locale/lang/xx.js => lib/umd/locale/xx.js
+ */
 var fs = require('fs');
 var save = require('file-save');
 var resolve = require('path').resolve;
@@ -5,6 +9,7 @@ var basename = require('path').basename;
 var localePath = resolve(__dirname, '../../src/locale/lang');
 var fileList = fs.readdirSync(localePath);
 
+// 转换方法 es6 to umd
 var transform = function(filename, name, cb) {
   require('babel-core').transformFile(resolve(localePath, filename), {
     plugins: [

@@ -1,5 +1,8 @@
 'use strict';
-
+/**
+ * 用于自动生成新组件的脚本
+ * 新增文件内容含组件本身.vue文件、样式文件、加载文件、ts文件、官网对应组件路由与文档文件等等
+ */
 console.log();
 process.on('exit', () => {
   console.log();

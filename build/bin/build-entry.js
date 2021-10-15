@@ -1,3 +1,7 @@
+/**
+ * 用于自动生成全组件加载文件（即src/index.js）的脚本
+ * 在组件库开发、编译、发布的前置都会使用
+ */
 var Components = require('../../components.json');
 var fs = require('fs');
 var render = require('json-templater/string');
@@ -96,4 +100,3 @@ var template = render(MAIN_TEMPLATE, {
 
 fs.writeFileSync(OUTPUT_PATH, template);
 console.log('[build entry] DONE:', OUTPUT_PATH);
-

@@ -1,46 +1,48 @@
 .PHONY: dist test
+# Ö´ĞĞmakeÄ¬ÈÏÖ¸Ïòhelp
 default: help
 
 # build all theme
+# ¹¹½¨Ö÷Ìâ
 build-theme:
 	npm run build:theme
-
+# °²×°ÒÀÀµ
 install:
 	npm install
-
+# Ê¹ÓÃÌÔ±¦Ô´°²×°ÒÀÀµ
 install-cn:
 	npm install --registry=http://registry.npm.taobao.org
-
+# ¹¹½¨Ó¦ÓÃ
 dev:
 	npm run dev
 
 play:
 	npm run dev:play
-
+# ĞÂÔö×é¼ş
 new:
 	node build/bin/new.js $(filter-out $@,$(MAKECMDGOALS))
-
+# ÎªÍøÕ¾Ìí¼ÓĞÂÓïÑÔ
 new-lang:
 	node build/bin/new-lang.js $(filter-out $@,$(MAKECMDGOALS))
-
+# ´ò°ü
 dist: install
 	npm run dist
-
+# ²¿Êğ
 deploy:
 	@npm run deploy
-
+# ·¢²¼
 pub:
 	npm run pub
-
+# µ¥Ôª²âÊÔ
 test:
 	npm run test:watch
-
+# °ïÖúĞÅÏ¢
 help:
-	@echo "   \033[35mmake\033[0m \033[1må‘½ä»¤ä½¿ç”¨è¯´æ˜\033[0m"
-	@echo "   \033[35mmake install\033[0m\t\033[0m\t\033[0m\t\033[0m\t---  å®‰è£…ä¾èµ–"
-	@echo "   \033[35mmake new <component-name> [ä¸­æ–‡å]\033[0m\t---  åˆ›å»ºæ–°ç»„ä»¶ package. ä¾‹å¦‚ 'make new button æŒ‰é’®'"
-	@echo "   \033[35mmake dev\033[0m\t\033[0m\t\033[0m\t\033[0m\t---  å¼€å‘æ¨¡å¼"
-	@echo "   \033[35mmake dist\033[0m\t\033[0m\t\033[0m\t\033[0m\t---  ç¼–è¯‘é¡¹ç›®ï¼Œç”Ÿæˆç›®æ ‡æ–‡ä»¶"
-	@echo "   \033[35mmake deploy\033[0m\t\033[0m\t\033[0m\t\033[0m\t---  éƒ¨ç½² demo"
-	@echo "   \033[35mmake pub\033[0m\t\033[0m\t\033[0m\t\033[0m\t---  å‘å¸ƒåˆ° npm ä¸Š"
-	@echo "   \033[35mmake new-lang <lang>\033[0m\t\033[0m\t\033[0m\t---  ä¸ºç½‘ç«™æ·»åŠ æ–°è¯­è¨€. ä¾‹å¦‚ 'make new-lang fr'"
+	@echo "   make                                 ---  ÃüÁîÊ¹ÓÃËµÃ÷"
+	@echo "   make install                         ---  °²×°ÒÀÀµ"
+	@echo "   make new <component-name> [ÖĞÎÄÃû]   ---  ´´½¨ĞÂ×é¼ş package. ÀıÈç 'make new button °´Å¥'"
+	@echo "   make dev                             ---  ¿ª·¢Ä£Ê½"
+	@echo "   make dist                            ---  ±àÒëÏîÄ¿£¬Éú³ÉÄ¿±êÎÄ¼ş"
+	@echo "   make deploy                          ---  ²¿Êğ demo"
+	@echo "   make pub                             ---  ·¢²¼µ½ npm ÉÏ"
+	@echo "   make new-lang <lang>                 ---  ÎªÍøÕ¾Ìí¼ÓĞÂÓïÑÔ. ÀıÈç 'make new-lang fr'"

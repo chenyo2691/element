@@ -1,5 +1,9 @@
 'use strict';
-
+/**
+ * 用于自动生成官网icon组件全部icon内容的JSON文件的脚本
+ * 在开发、编译、发布的前置都会使用
+ * 提示：原理是读取packages/theme-chalk/src/icon.scss文件，通过postcss获取样式中全部的样式节点，并通过正则表达式提取icon内容，最终输出目标文件。
+ */
 var postcss = require('postcss');
 var fs = require('fs');
 var path = require('path');
